@@ -147,6 +147,14 @@ input[type="range"]::-moz-range-thumb {
     max-width: 560px;
     min-height: 250px; /* 内容に応じて調整 */
 }
+
+/* 確認ダイアログ固有のスタイル調整 */
+.dialog-modal { /* 確認ダイアログのモーダル */
+    max-width: 480px; /* 最大幅を少し狭く */
+    min-height: 200px; /* 最小高さ */
+}
+
+
 /* スポットライト効果のための背景オーバーレイ (ガイダンス用) */
 .guidance-spotlight-overlay {
     position: fixed;
@@ -161,6 +169,9 @@ input[type="range"]::-moz-range-thumb {
 .highlighted-element { /* ガイダンスでハイライトする要素 */
     position: relative;
     z-index: 9985; /* スポットライトオーバーレイより手前 */
+    /* 必要に応じて outline や box-shadow を追加して目立たせる */
+    /* outline: 2px solid #2563eb; */ /* 例: Tailwind blue-600 */
+    /* box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); */
 }
 
 /* 左ペインのプレビューエリアの調整 */

@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' https://cdn.tailwindcss.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://placehold.co;">
     <title>画像整理アプリ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css"> </head>
 <body class="bg-slate-100 text-slate-800 flex flex-col h-screen">
 
     <header id="headerArea" class="bg-white p-3 shadow flex items-center justify-between border-b border-slate-200">
@@ -28,7 +26,7 @@
             <button id="scanBtn" class="px-4 py-1.5 text-sm bg-green-500 hover:bg-green-600 text-white rounded-md shadow-sm transition-colors whitespace-nowrap" title="対象フォルダのスキャンを開始します">スキャン開始</button>
             <button id="settingsBtn" title="設定" class="p-1.5 rounded-md hover:bg-slate-200 transition-colors text-slate-600 hover:text-slate-800">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                    <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41l-3.84,0c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.03c-0.59,0.24-1.13,0.57-1.62,0.96l-2.39-0.96c-0.22-0.08-0.47,0-0.59,0.22l-1.92,3.32c-0.11,0.2-0.06,0.47,0.12,0.61l2.03,1.58C4.02,11.36,4,11.68,4,12s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.22c0.04,0.24,0.24,0.41,0.48,0.41l3.84,0c0.24,0-0.43,0.17-0.47,0.41l0.36-2.22c0.59-0.24,1.13-0.57,1.62-0.96l2.39,0.96c0.22,0.08-0.47,0-0.59,0.22l1.92-3.32c0.11-0.2,0.06-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+                    <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41l-3.84,0c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.03c-0.59,0.24-1.13,0.57-1.62,0.96l-2.39-0.96c-0.22-0.08-0.47,0-0.59,0.22l-1.92,3.32c-0.11,0.2-0.06,0.47,0.12,0.61l2.03,1.58C4.02,11.36,4,11.68,4,12s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.22c0.04,0.24,0.24,0.41,0.48,0.41l3.84,0c0.24,0,0.43,0.17,0.47,0.41l0.36-2.22c0.59-0.24,1.13-0.57,1.62-0.96l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.11-0.2,0.06-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
                 </svg>
             </button>
         </div>
@@ -45,7 +43,8 @@
                 <div class="flex items-center justify-between text-xs text-slate-600">
                     <span>倍率: <span id="zoomValueDisplay">100</span>%</span>
                     <button id="resetZoomBtn" class="p-1 rounded hover:bg-slate-200" title="100%にリセット (Ctrl + 0)">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
                             <path d="M5 15H3v4c0 1.1.9 2 2 2h4v-2H5v-4zm0-8H3V3c0-1.1.9-2 2-2h4v2H5v4zm11-5h-4v2h4v4h2V3c0-1.1-.9-2-2-2zm-7 1C7.67 4 4 7.67 4 12s3.67 8 8 8 8-3.67 8-8-3.67-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm4-4h-4v-4h2v2h2v2z"/>
                         </svg>
                     </button>
@@ -53,13 +52,15 @@
                 <input type="range" id="zoomSlider" min="1" max="150" value="100" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-500">
                 <div class="flex items-center justify-center space-x-2">
                     <button id="zoomOutBtn" class="p-1 rounded hover:bg-slate-200" title="縮小 (Ctrl + -)">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                            <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5">
+                           <path d="M0 0h24v24H0V0z" fill="none"/>
+                           <path d="M7 11v2h10v-2H7zm5-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                         </svg>
                     </button>
                     <input type="number" id="zoomInput" min="1" max="150" value="100" class="w-16 px-2 py-1 text-xs border border-slate-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-center">
                     <button id="zoomInBtn" class="p-1 rounded hover:bg-slate-200" title="拡大 (Ctrl + +)">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
                             <path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                         </svg>
                     </button>
@@ -101,12 +102,36 @@
                         <thead class="bg-slate-50">
                             <tr>
                                 <th class="w-10 px-3 py-2 text-left font-medium text-slate-500 tracking-wider"><input type="checkbox" id="selectAllBlur" class="rounded border-slate-300 text-blue-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 h-4 w-4 mx-auto block"></th>
-                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider">ファイル名 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
-                                <th class="w-24 px-3 py-2 text-left font-medium text-slate-500 tracking-wider">サイズ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
-                                <th class="w-32 px-3 py-2 text-left font-medium text-slate-500 tracking-wider hidden md:table-cell">更新日時 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
-                                <th class="w-32 px-3 py-2 text-left font-medium text-slate-500 tracking-wider hidden lg:table-cell">撮影日時 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
-                                <th class="w-28 px-3 py-2 text-left font-medium text-slate-500 tracking-wider hidden lg:table-cell">解像度 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
-                                <th class="w-24 px-3 py-2 text-left font-medium text-slate-500 tracking-wider" title="ブレの度合い (0-100、数値が高いほどブレが大きい)">ブレスコア <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
+                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider">ファイル名
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
+                                <th class="w-24 px-3 py-2 text-left font-medium text-slate-500 tracking-wider">サイズ
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
+                                <th class="w-32 px-3 py-2 text-left font-medium text-slate-500 tracking-wider hidden md:table-cell">更新日時
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
+                                <th class="w-32 px-3 py-2 text-left font-medium text-slate-500 tracking-wider hidden lg:table-cell">撮影日時
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
+                                <th class="w-28 px-3 py-2 text-left font-medium text-slate-500 tracking-wider hidden lg:table-cell">解像度
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
+                                <th class="w-24 px-3 py-2 text-left font-medium text-slate-500 tracking-wider" title="ブレの度合い (0-100、数値が高いほどブレが大きい)">ブレスコア
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
                             </tr>
                         </thead>
                         <tbody id="blurTableBody" class="bg-white divide-y divide-slate-200">
@@ -128,7 +153,7 @@
                                 <td class="px-3 py-2 text-slate-600 hidden lg:table-cell">1024x768</td>
                                 <td class="px-3 py-2 text-orange-500 font-medium">78</td>
                             </tr>
-                            </tbody>
+                        </tbody>
                     </table>
                 </div>
                 <div id="similarContent" class="tab-content hidden">
@@ -137,16 +162,28 @@
                             <tr>
                                 <th class="w-10 px-3 py-2"><input type="checkbox" id="selectAllSimilarPair" title="全ペア選択" class="rounded border-slate-300 text-blue-600 shadow-sm h-4 w-4 mx-auto block"></th>
                                 <th class="w-10 px-3 py-2"><input type="checkbox" id="selectAllSimilarFile1" title="全ファイル1選択" class="rounded border-slate-300 text-blue-600 shadow-sm h-4 w-4 mx-auto block"></th>
-                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider">ファイル名1 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
+                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider">ファイル名1
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
                                 <th class="w-28 px-3 py-2 text-left font-medium text-slate-500 tracking-wider hidden md:table-cell">解像度1</th>
                                 <th class="w-10 px-3 py-2"><input type="checkbox" id="selectAllSimilarFile2" title="全ファイル2選択" class="rounded border-slate-300 text-blue-600 shadow-sm h-4 w-4 mx-auto block"></th>
-                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider">ファイル名2 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
+                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider">ファイル名2
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
                                 <th class="w-28 px-3 py-2 text-left font-medium text-slate-500 tracking-wider hidden md:table-cell">解像度2</th>
-                                <th class="w-24 px-3 py-2 text-left font-medium text-slate-500 tracking-wider" title="画像の類似度 (0-100%、数値が高いほど類似している)">類似度 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
+                                <th class="w-24 px-3 py-2 text-left font-medium text-slate-500 tracking-wider" title="画像の類似度 (0-100%、数値が高いほど類似している)">類似度
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
                             </tr>
                         </thead>
                         <tbody id="similarTableBody" class="bg-white divide-y divide-slate-200">
-                            <tr class="bg-yellow-50 hover:bg-yellow-100"
+                             <tr class="bg-yellow-50 hover:bg-yellow-100"
                                 data-filepath1="C:/Images/Similar/GroupA_img1_very_long_name_to_test_truncate.jpg" data-filename1="GroupA_img1_very_long_name_to_test_truncate.jpg" data-filesize1="1.2 MB" data-resolution1="1920x1080" data-takendate1="2024/03/10 11:00:00" data-previewsrc1="https://placehold.co/280x180/e2e8f0/94a3b8?text=GroupA_img1.jpg"
                                 data-filepath2="C:/Images/Similar/GroupA_img2_also_a_long_name_for_testing.jpg" data-filename2="GroupA_img2_also_a_long_name_for_testing.jpg" data-filesize2="1.3 MB" data-resolution2="1920x1080" data-takendate2="2024/03/10 11:00:05" data-previewsrc2="https://placehold.co/280x180/e2e8f0/94a3b8?text=GroupA_img2.jpg"
                                 data-similarscore="98%">
@@ -155,8 +192,8 @@
                                 <td class="px-3 py-2 text-slate-700 truncate" title="GroupA_img1_very_long_name_to_test_truncate.jpg">
                                     <span class="inline-flex items-center" title="アプリによる推奨（主な判断根拠: 解像度が高い）">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mr-1 text-amber-500">
-                                            <path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
-                                        </svg>
+                                            <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"/>
+                                            </svg>
                                         GroupA_img1...jpg
                                     </span>
                                 </td>
@@ -166,7 +203,7 @@
                                 <td class="px-3 py-2 text-slate-600 hidden md:table-cell">1920x1080</td>
                                 <td class="px-3 py-2 text-green-600 font-medium">98%</td>
                             </tr>
-                            </tbody>
+                        </tbody>
                     </table>
                 </div>
                 <div id="errorContent" class="tab-content hidden">
@@ -174,9 +211,21 @@
                         <thead class="bg-slate-50">
                             <tr>
                                 <th class="w-10 px-3 py-2"><input type="checkbox" id="selectAllError" class="rounded border-slate-300 text-blue-600 shadow-sm h-4 w-4 mx-auto block"></th>
-                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider">ファイル名 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
-                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider">エラー内容 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
-                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider hidden sm:table-cell">パス <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg></th>
+                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider">ファイル名
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
+                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider">エラー内容
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
+                                <th class="px-3 py-2 text-left font-medium text-slate-500 tracking-wider hidden sm:table-cell">パス
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 inline-block ml-1 text-slate-400 opacity-50">
+                                        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+                                    </svg>
+                                </th>
                             </tr>
                         </thead>
                         <tbody id="errorTableBody" class="bg-white divide-y divide-slate-200">
@@ -187,14 +236,14 @@
                                     <span class="inline-flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="currentColor" class="w-5 h-5 mr-1 text-red-500">
                                             <path d="M0 0h24v24H0V0z" fill="none"/>
-                                            <path d="M21 5v11.59l-3-3.01-4 4.01-4-4-4 4-3-3.01V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2zm-3 14H6V3H4v18h14v-2h3v-7.42l-3-2.99zM19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6V5h12v14zm-4.01-6.71L11.5 15.59l-2.01-2.01L6.5 17h11l-3.51-4.71z"/>
-                                        </svg>
+                                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/>
+                                            </svg>
                                         ファイルが破損しています
                                     </span>
                                 </td>
                                 <td class="px-3 py-2 text-slate-500 truncate hidden sm:table-cell" title="C:\Users\YourName\Pictures\Problematic\corrupted_image_file_example.jpg">C:\...\corrupted_image...jpg</td>
                             </tr>
-                            </tbody>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -208,9 +257,10 @@
                     <button id="deselectAllBtn" class="flex-1 px-3 py-1.5 text-xs bg-slate-400 hover:bg-slate-500 text-white rounded-md shadow-sm transition-colors">選択解除</button>
                 </div>
                 <button id="exportErrorLogBtn" class="mt-2 w-full flex items-center justify-center px-3 py-1.5 text-xs bg-emerald-500 hover:bg-emerald-600 text-white rounded-md shadow-sm transition-colors hidden" title="エラーログをファイルに保存します">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="currentColor" class="w-4 h-4 mr-1"> <path d="M0 0h24v24H0V0z" fill="none"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="currentColor" class="w-4 h-4 mr-1">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
                         <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
-                    </svg>
+                        </svg>
                     エラーログをエクスポート...
                 </button>
             </div>
@@ -224,7 +274,7 @@
                             <span>-</span>
                             <input type="number" id="blurScoreMax" step="1" min="0" max="100" value="100" class="w-20 px-2 py-1 text-xs border border-slate-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                         </div>
-                        </div>
+                    </div>
                 </div>
                 <div id="similarFilterPanel" class="space-y-3 filter-options hidden">
                     <div>
@@ -263,36 +313,40 @@
         <div id="footerActionsContainer" class="footer-actions-responsive">
             <div id="generalActions" class="flex space-x-2">
                 <button id="btnTrash" class="flex items-center px-4 py-1.5 text-sm bg-amber-500 hover:bg-amber-600 text-white rounded-md shadow-sm transition-colors" title="選択した画像をゴミ箱へ移動します">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
-                        <path d="M16 9v10H8V9h8m-1.5-6h-5l-1 1H5v2h14V4h-3.5l-1-1zM18 7H6v12c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7z"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                        </svg>
                     ゴミ箱へ
                 </button>
                 <button id="btnDeletePermanent" class="flex items-center px-4 py-1.5 text-sm bg-red-600 hover:bg-red-700 text-white rounded-md shadow-sm transition-colors" title="選択した画像を完全に削除します">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
-                        <path d="M14.12 10.47 12 12.59l-2.13-2.12-1.41 1.41L10.59 14l-2.12 2.12 1.41 1.41L12 15.41l2.12 2.12 1.41-1.41L13.41 14l2.12-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12z"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/>
+                        </svg>
                     完全に削除
                 </button>
                 <button id="btnMove" class="flex items-center px-4 py-1.5 text-sm bg-sky-500 hover:bg-sky-600 text-white rounded-md shadow-sm transition-colors" title="選択した画像を移動します">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
-                        <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 12v-3h-4v-2h4V8l4 4-4 4z"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V6h5.17l2 2H20v10zm-8-4h2V8h-2v2H8v2h4v2zm2 3l4-4-4-4v3H8v2h4v3z"/>
+                        </svg>
                     移動...
                 </button>
             </div>
             <div id="errorActions" class="flex space-x-2 hidden">
                 <button id="btnIgnoreError" class="flex items-center px-4 py-1.5 text-sm bg-slate-500 hover:bg-slate-600 text-white rounded-md shadow-sm transition-colors" title="選択したエラー項目をリストから無視します">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
-                        <path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.44-4.75C21.27 9.12 17.5 4 12 4c-1.4 0-2.73.25-3.98.7L9.65 6.35C10.37 6.13 11.17 6 12 6zm-1.05 5.05L12 11l.95.95-1.09 1.09L13 14.17l1.09-1.09.95.95-2.05 2.05-2.05-2.05.95-.95 1.09 1.09zm-4.01-7.32L4.22 2.01 3 3.23l2.09 2.09C4.07 6.43 3.09 7.69 2.35 9c1.52 2.87 4.35 5 7.65 5 1.06 0 2.07-.21 3-.58l2.88 2.88 1.23-1.23-1.73-1.73-8.24-8.24zm7.75 10.27c-.73.32-1.5.5-2.3.5-3.27 0-6.06-2.09-7.62-4.94.62-1.12 1.44-2.11 2.43-2.91l1.41 1.41C9.63 10.74 9 11.77 9 13c0 1.66 1.34 3 3 3 .69 0 1.32-.24 1.82-.62l1.44 1.44z"/>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.44-4.75C21.27 9.12 17.5 4 12 4c-1.4 0-2.73.25-3.98.7L9.65 6.35C10.37 6.13 11.17 6 12 6c.34 0 .67.04 1 .1l-2.42 2.42C10.22 8.88 10 9.41 10 10c0 1.1.9 2 2 2 .59 0 1.12-.22 1.52-.58L16.9 14.8C16.08 15.55 15.07 16 14 16c-2.76 0-5-2.24-5-5 0-.93.25-1.79.68-2.53l-1.45-1.45C3.39 8.09 2 9.84 2 12c0 2.76 2.24 5 5 5 .93 0 1.79-.25 2.53-.68l1.45 1.45C9.91 18.61 8.16 20 6 20c-3.31 0-6-2.69-6-6 0-2.16 1.15-4.05 2.87-5.12L1.39 7.39 2.81 6l18.38 18.38 1.41-1.41L12.05 11.05C12.02 11.36 12 11.68 12 12z"/>
+                        </svg>
                     選択を無視
                 </button>
                 <button id="btnRetryScan" class="flex items-center px-4 py-1.5 text-sm bg-blue-500 hover:bg-blue-600 text-white rounded-md shadow-sm transition-colors" title="選択したエラー項目を再スキャンします">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
                         <path d="M0 0h24v24H0V0z" fill="none"/>
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8.5h2V10l3-3-3-3v1.5H9V7h4v2h-2v7z"/>
-                    </svg>
+                        <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+                        </svg>
                     再スキャン試行
                 </button>
             </div>
@@ -310,9 +364,10 @@
             <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between">
                 <h2 class="text-lg font-semibold text-slate-800">設定</h2>
                 <button id="closeSettingsModalBtn" class="p-1 rounded-md hover:bg-slate-200 text-slate-400 hover:text-slate-600" title="閉じる">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-6 h-6">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
                         <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
-                    </svg>
+                        </svg>
                 </button>
             </div>
             <div class="p-6 flex-grow overflow-y-auto space-y-6">
@@ -359,13 +414,14 @@
                         </select>
                     </div>
                      <div class="mt-4">
-                        <label for="logFilePath" class="block text-sm font-medium text-slate-700">ログファイルの場所</label>
+                        <label for="logFilePathInput" class="block text-sm font-medium text-slate-700">ログファイルの場所</label>
                         <div class="mt-1 flex rounded-md shadow-sm">
                             <input type="text" name="logFilePath" id="logFilePathInput" readonly value="C:\Users\YourName\AppData\Local\ImageCleanupAssistant\logs" class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none rounded-l-md sm:text-sm border-slate-300 bg-slate-100 p-2 cursor-not-allowed">
                             <button type="button" id="changeLogPathButton" class="-ml-px relative inline-flex items-center space-x-2 px-3 py-2 border border-l-0 border-slate-300 text-sm font-medium rounded-r-md text-slate-700 bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-slate-500">
-                                    <path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 text-slate-500">
+                                   <path d="M0 0h24v24H0V0z" fill="none"/>
+                                   <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+                                   </svg>
                                 <span class="hidden sm:inline">変更...</span>
                             </button>
                         </div>
@@ -374,15 +430,24 @@
             </div>
             <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end space-x-3 rounded-b-lg">
                 <button id="settingsCancelBtn" class="flex items-center px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-300 rounded-md shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-1 -ml-1"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                        </svg>
                     キャンセル
                 </button>
                 <button id="settingsApplyBtn" class="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-1 -ml-1"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm2 16H5V5h11.17L19 7.83V19zm-7-7c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm3-8H5v5h14V5h-4z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm2 16H5V5h11.17L19 7.83V19zm-7-7c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm3-8H5v5h14V5h-4z"/>
+                        </svg>
                     適用
                 </button>
                 <button id="settingsOkBtn" class="flex items-center px-4 py-2 text-sm font-medium text-white bg-green-600 border border-transparent rounded-md shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-1 -ml-1"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 mr-1 -ml-1">
+                        <path d="M0 0h24v24H0V0z" fill="none"/>
+                        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                        </svg>
                     OK
                 </button>
             </div>
@@ -391,7 +456,8 @@
 
     <div id="guidanceSpotlightOverlay" class="guidance-spotlight-overlay hidden"></div>
     <div id="guidanceModalOverlay" class="modal-overlay hidden">
-        <div class="modal-content guidance-modal-content"> <div class="px-6 py-4">
+        <div class="modal-content guidance-modal-content">
+            <div class="px-6 py-4">
                 <h3 id="guidanceTitle" class="text-lg font-semibold text-slate-800">ガイダンスタイトル</h3>
             </div>
             <div class="p-6 flex-grow">
@@ -404,19 +470,60 @@
                 </div>
                 <div class="flex space-x-3">
                     <button id="skipGuidanceBtn" class="flex items-center px-4 py-2 text-sm font-medium text-slate-700 bg-slate-200 hover:bg-slate-300 rounded-md shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-1"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M7.71 14.29l3.58-3.58L7.71 7.12l1.41-1.41L12.71 9.3l3.58-3.59L17.71 7.12l-3.59 3.59 3.59 3.59-1.41 1.41L12.71 12.13l-3.58 3.58-1.42-1.42zM6 6h2v12H6V6zm10 0h2v12h-2V6z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 mr-1">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M7.71 14.29l3.58-3.58L7.71 7.12l1.41-1.41L12.71 9.3l3.58-3.59L17.71 7.12l-3.59 3.59 3.59 3.59-1.41 1.41L12.71 12.13l-3.58 3.58-1.42-1.42zM6 6h2v12H6V6zm10 0h2v12h-2V6z"/>
+                            </svg>
                         スキップ
                     </button>
                     <button id="nextGuidanceBtn" class="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 rounded-md shadow-sm">
                         <span id="nextGuidanceBtnText">次へ</span>
-                        <svg id="nextGuidanceBtnIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 ml-1"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+                        <svg id="nextGuidanceBtnIcon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="w-5 h-5 ml-1">
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                            </svg>
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="confirmationDialogOverlay" class="modal-overlay hidden">
+        <div class="dialog-modal modal-content bg-white rounded-lg shadow-xl flex flex-col max-w-md">
+            <div id="dialogHeader" class="px-6 py-4 flex items-center space-x-3 border-b border-slate-200">
+                <div id="dialogIconContainer" class="text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 0 24 24" width="28px" fill="currentColor" class="w-7 h-7">
+                        <path d="M0 0h24v24H0V0z" fill="none"/><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    </svg>
+                </div>
+                <h3 id="dialogTitle" class="text-lg font-semibold text-slate-800">確認</h3>
+            </div>
 
-    <script defer src="renderer.js"></script>
-</body>
+            <div class="p-6 flex-grow">
+                <p id="dialogMessage" class="text-sm text-slate-600 whitespace-pre-wrap">ここに確認メッセージが表示されます。</p>
+                <p id="dialogExtraInfo" class="mt-2 text-sm text-slate-500 font-medium"></p>
+            </div>
+
+            <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end space-x-3 rounded-b-lg">
+                <button id="dialogCancelBtn" class="flex items-center px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-300 rounded-md shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="currentColor" class="w-4 h-4 mr-1 -ml-1">
+                        <path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+                    </svg>
+                    キャンセル
+                </button>
+                <button id="dialogConfirmBtn" class="flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <span id="dialogConfirmIconContainer" class="mr-1 -ml-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="currentColor" class="w-4 h-4">
+                             <path d="M0 0h24v24H0V0z" fill="none"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                    </span>
+                    <span id="dialogConfirmBtnText">実行</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" defer src="renderer.js"></script> 
+    </body>
 </html>
