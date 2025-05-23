@@ -2,7 +2,7 @@
   "name": "imagecleanupassistant",
   "version": "1.0.0",
   "description": "手ブレ画像や類似画像を検出・整理するアプリ",
-  "main": "main.js",
+  "main": "src/main/main.js",
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
