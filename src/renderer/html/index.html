@@ -6,7 +6,8 @@
     <title>画像整理アプリ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 <body class="bg-slate-100 text-slate-800 flex flex-col h-screen">
 
     <header id="headerArea" class="bg-white p-3 shadow flex items-center justify-between border-b border-slate-200">
@@ -32,7 +33,7 @@
         </div>
     </header>
 
-    <main class="flex-grow flex p-3 space-x-3 overflow-hidden">
+    <main>
         <aside id="leftPane" class="left-pane bg-white p-3 rounded-lg shadow flex flex-col space-y-2 overflow-y-auto">
             <h2 class="text-base font-semibold text-slate-700 mb-2">プレビューエリア</h2>
             <div id="previewImageContainer" class="flex-grow bg-slate-200 rounded flex items-center justify-center text-slate-500 min-h-[200px] sm:min-h-[300px] relative">
@@ -524,6 +525,6 @@
     </div>
 
 
-    <script type="module" defer src="renderer.js"></script> 
+    <script type="module" defer src="../js/renderer.js"></script> 
     </body>
 </html>

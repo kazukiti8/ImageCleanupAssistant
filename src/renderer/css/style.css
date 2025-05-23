@@ -19,19 +19,50 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #a1a1a1; /* slate-500 相当 */
 }
+
+/* ペインのレスポンシブレイアウトを改善 */
+main {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 0.75rem;
+    gap: 0.75rem;
+    width: 100%;
+}
+
 /* ペインの最小幅と基本的な挙動を定義 */
 .left-pane {
     min-width: 220px; /* UI/UXタスクリストに基づく最小幅 */
     width: 25%;    /* デフォルト幅の目安 */
+    flex-shrink: 0; /* 幅を縮小しない */
 }
 .center-pane {
     min-width: 320px; /* UI/UXタスクリストに基づく最小幅 */
-    width: 50%;    /* デフォルト幅の目安 */
+    flex-grow: 1;    /* 利用可能な残りのスペースを使用 */
+    flex-basis: 0;   /* フレックスアイテムの初期サイズを0に */
 }
 .right-pane {
     min-width: 260px; /* UI/UXタスクリストに基づく最小幅 */
     width: 25%;    /* デフォルト幅の目安 */
+    max-width: 300px; /* 最大幅を制限 */
+    flex-shrink: 0; /* 幅を縮小しない */
 }
+
+/* 大画面では中央ペインにより多くのスペースを */
+@media (min-width: 1200px) {
+    .center-pane {
+        flex-grow: 2; /* より多くのスペースを割り当て */
+    }
+}
+
+/* 極端に大きな画面でもレイアウトを維持 */
+@media (min-width: 1600px) {
+    main {
+        max-width: 1800px; /* コンテンツの最大幅を制限 */
+        margin: 0 auto; /* 中央寄せ */
+    }
+}
+
 /* アクティブなタブのスタイル */
 .tab-active {
     border-bottom-color: #3b82f6 !important; /* blue-500 */
@@ -187,4 +218,15 @@ input[type="range"]::-moz-range-thumb {
 }
 #imageInfoContainer span:not(.font-medium), #imageInfoContainer2 span:not(.font-medium) {
     color: #1f2937; /* slate-800 */
+}
+
+/* テーブルの表示を改善 */
+.table-fixed {
+    width: 100%;
+}
+
+/* テーブルの内容が多い場合のスクロール改善 */
+#tabContentContainer {
+    overflow-x: auto;
+    overflow-y: auto;
 }
