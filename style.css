@@ -1,0 +1,179 @@
+/* style.css */
+body {
+    font-family: 'Inter', sans-serif;
+    overscroll-behavior: none; /* スクロール連鎖を防止 */
+}
+/* スクロールバーのスタイル */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* slate-200 相当 */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c4c4c4; /* slate-400 相当 */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1; /* slate-500 相当 */
+}
+/* ペインの最小幅と基本的な挙動を定義 */
+.left-pane {
+    min-width: 220px; /* UI/UXタスクリストに基づく最小幅 */
+    width: 25%;    /* デフォルト幅の目安 */
+}
+.center-pane {
+    min-width: 320px; /* UI/UXタスクリストに基づく最小幅 */
+    width: 50%;    /* デフォルト幅の目安 */
+}
+.right-pane {
+    min-width: 260px; /* UI/UXタスクリストに基づく最小幅 */
+    width: 25%;    /* デフォルト幅の目安 */
+}
+/* アクティブなタブのスタイル */
+.tab-active {
+    border-bottom-color: #3b82f6 !important; /* blue-500 */
+    color: #3b82f6 !important;
+    font-weight: 600; /* semibold */
+}
+/* 非表示クラス */
+.hidden {
+    display: none !important;
+}
+/* テーブルのスタイリング調整 */
+.table-fixed th, .table-fixed td {
+    padding: 0.5rem 0.75rem; /* py-2 px-3 相当 */
+    white-space: nowrap;
+    border-bottom-width: 1px; /* Add bottom border to cells for separation */
+    border-color: #e5e7eb; /* slate-200 */
+}
+.table-fixed thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f9fafb; /* bg-slate-50 */
+    z-index: 10; /* 他のコンテンツより手前に */
+    font-weight: 500; /* medium */
+    color: #4b5563; /* slate-600 */
+    text-transform: uppercase; /* モックアップに合わせて大文字化 */
+    letter-spacing: 0.05em; /* tracking-wider */
+}
+.table-fixed tbody tr.bg-yellow-50:hover {
+    background-color: #fef9c3; /* hover:bg-yellow-100 */
+}
+.table-fixed tbody tr:hover {
+    background-color: #f0f9ff; /* hover:bg-sky-50 相当、選択行と区別 */
+}
+.table-fixed tbody tr.selected-row {
+    background-color: #e0f2fe; /* bg-sky-100 相当、より濃い選択色 */
+}
+.table-fixed tbody td {
+    color: #374151; /* slate-700 */
+}
+.table-fixed tbody td.text-red-500,
+.table-fixed tbody td.text-orange-500,
+.table-fixed tbody td.text-green-600 {
+    font-weight: 500; /* medium */
+}
+
+
+/* Range SliderのThumbのスタイル */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px; /* 1rem */
+    height: 16px; /* 1rem */
+    background: #3b82f6; /* blue-500 */
+    cursor: pointer;
+    border-radius: 9999px; /* rounded-full */
+    margin-top: -6px; /* thumbの位置調整 (trackの高さが8pxの場合) */
+}
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #3b82f6; /* blue-500 */
+    cursor: pointer;
+    border-radius: 9999px;
+    border: none;
+}
+/* フッターボタンのレスポンシブ対応 */
+.footer-actions-responsive {
+    display: flex;
+    gap: 0.5rem; /* 8px */
+}
+@media (max-width: 799px) { /* 800px未満で縦並び */
+    .footer-actions-responsive {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
+    .footer-actions-responsive button {
+        width: 100%;
+        justify-content: center;
+    }
+    #footerInfoContainer {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}
+/* モーダルダイアログのスタイル */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒 */
+    z-index: 9990; /* 他のUIより手前 */
+    display: flex; /* flexを使って中央揃え */
+    align-items: center;
+    justify-content: center;
+}
+.modal-content { /* 設定モーダル、確認ダイアログ共通 */
+    background-color: white;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); /* shadow-xl */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.settings-modal-content { /* 設定画面モーダル固有のサイズ */
+    max-width: 600px;
+    min-height: 420px;
+}
+.guidance-modal-content { /* 初回ガイダンスモーダル固有のサイズ */
+    max-width: 560px;
+    min-height: 250px; /* 内容に応じて調整 */
+}
+/* スポットライト効果のための背景オーバーレイ (ガイダンス用) */
+.guidance-spotlight-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65); /* 少し濃いめ */
+    z-index: 9980; /* モーダルより奥、メインUIより手前 */
+    /* clip-path はJSで動的に設定 */
+}
+.highlighted-element { /* ガイダンスでハイライトする要素 */
+    position: relative;
+    z-index: 9985; /* スポットライトオーバーレイより手前 */
+}
+
+/* 左ペインのプレビューエリアの調整 */
+#previewImageContainer {
+    min-height: 250px; /* モックアップに合わせて少し高めに */
+}
+#imageInfoContainer p, #imageInfoContainer2 p {
+    margin-bottom: 0.2rem; /* 情報間の間隔を少し詰める */
+}
+#imageInfoContainer .font-medium, #imageInfoContainer2 .font-medium {
+    color: #4b5563; /* slate-600 */
+    margin-right: 0.25rem;
+}
+#imageInfoContainer span:not(.font-medium), #imageInfoContainer2 span:not(.font-medium) {
+    color: #1f2937; /* slate-800 */
+}

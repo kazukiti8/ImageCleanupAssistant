@@ -1,0 +1,114 @@
+# Node.js / npm / yarn
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json # プロジェクトによっては含める場合もあるが、今回は除外も検討
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+pip-wheel-metadata/
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE and editor configuration files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sublime-workspace
+*.sublime-project
+
+# Electron build output
+dist/
+out/
+release/
+*.asar
+*.dmg
+*.exe
+*.app
+*.deb
+*.rpm
+*.zip
+*.tar.gz
+
+# Log files
+*.log
+logs/
+*.log.*
+
+# Temporary files and backups
+*~
+*.bak
+*.swp
+*.swo
+*.tmp
+
+# Sensitive information (example, adjust as needed)
+# .env
+# secrets.json
+# config.py # もし機密情報を含む場合
+
+# Windows specific
+# Thumbs.db
+# ehthumbs.db
+# Desktop.ini
+# $RECYCLE.BIN/
+
+# Python venv
+# venv/
+# .venv/
+# ENV/
+# env/
+# VENV/
+# venv.bak/
+# .env # .envファイルは環境変数管理に使われることが多く、機密情報を含む場合があるので注意
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+
+# MyPy cache
+.mypy_cache/
